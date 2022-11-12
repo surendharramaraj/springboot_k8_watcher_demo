@@ -1,0 +1,26 @@
+management: 
+  endpoints: 
+    web: 
+      exposure: 
+        include: refresh,info,health
+  endpoint: 
+    restart: 
+      enabled: true
+
+logging: 
+  level: 
+    org.springframework.cloud.kubernetes: debug
+
+spring:
+  application: 
+    name: springbootkuberneteswatcher
+  cloud: 
+    kubernetes: 
+      config: 
+        enabled: true
+        sources: 
+          - namespace: springboot-oc-api
+      reload: 
+        enabled: true
+        mode: event
+        strategy: refresh
