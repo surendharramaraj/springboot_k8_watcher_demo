@@ -7,7 +7,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @ConfigurationProperties(prefix = "bean")
 public class MyConfig {
-    private String message = "a message that can be changed live";
+    private String message;
 
     public String getMessage() {
         return message;
