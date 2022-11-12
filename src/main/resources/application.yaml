@@ -19,7 +19,7 @@ spring:
       config: 
         enabled: true
         sources: 
-          - namespace: springboot-oc-api
+          - namespace: spring-oc-api
       reload: 
         enabled: true
         mode: event
